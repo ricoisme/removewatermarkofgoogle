@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* 基本字型與背景 */
+body { font-family: 'Inter', sans-serif; }
+
+/* 自訂捲軸樣式（用於 canvas 容器） */
+.canvas-container::-webkit-scrollbar { width: 6px; height: 6px; }
+.canvas-container::-webkit-scrollbar-track { background: #1f2937; }
+.canvas-container::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 3px; }
+
+/* 透明格子背景（常見於圖片編輯工具，模擬透明） */
+.checkerboard {
+    background-color: #ffffff;
+    background-image: linear-gradient(45deg, #f3f4f6 25%, transparent 25%),
+                      linear-gradient(-45deg, #f3f4f6 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, #f3f4f6 75%),
+                      linear-gradient(-45deg, transparent 75%, #f3f4f6 75%);
+    background-size: 20px 20px;
+}
+
+/* SEO-friendly utility (theme-color for mobile browsers) */
+:root { --site-theme: #111827; }
+
+/* 微幅樣式調整以確保外部 CSS 覆寫 Tailwind 可用 */
+header, footer { background-color: #1f2937; }
+
+/* 小型可維護樣式區塊（如需再延伸請放在此處） */
+
+/* Accessibility helpers */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

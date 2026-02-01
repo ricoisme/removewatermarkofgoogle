@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rico技術學院 — 移除 Gemini / NotebookLM 浮水印｜AI 圖片去水印</title>
+    <meta name="description" content="Rico技術學院提供圖像修復工具，專注於移除 Gemini 浮水印、NotebookLM 浮水印。">
+    <meta name="keywords" content="移除gemini浮水印, 移除notebooklm浮水印, 移除AI圖片浮水印, 移除浮水印, AI 去水印, Rico技術學院, 圖片修復">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ricoschool.net/">
+    <meta name="theme-color" content="#111827">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Rico技術學院 - 移除 Google AI 浮水印">
+    <meta property="og:description" content="移除 Google AI 浮水印。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ricoschool.net/">
+    <meta property="og:site_name" content="Rico技術學院">
+    <meta property="og:image" content="/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rico技術學院 - 移除 Google AI 浮水印">
+    <meta name="twitter:description" content="移除 Google AI 浮水印。">
+    <meta name="twitter:image" content="/og-image.png">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Project styles (custom) -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+        <!-- Rich structured data: Organization, WebSite, Service, SoftwareApplication -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://ricoschool.net/#org",
+                    "name": "Rico技術學院",
+                    "url": "https://ricoschool.net/",
+                    "logo": "https://avatars.githubusercontent.com/u/17023972?v=4",
+                    "description": "Rico技術學院提供教學與工具，專注於移除 Gemini、NotebookLM。",
+                    "keywords": "移除gemini浮水印, 移除notebooklm浮水印, 移除AI圖片浮水印, Rico技術學院",
+                    "sameAs": [
+                        "https://twitter.com/yourhandle",
+                        "https://www.facebook.com/yourpage",
+                        "https://www.linkedin.com/company/yourcompany"
+                    ],
+                    "contactPoint": [
+                        {
+                            "@type": "ContactPoint",
+                            "contactType": "customer support",
+                            "telephone": "+886-2-1234-5678",
+                            "email": "support@ricoschool.net",
+                            "areaServed": "TW",
+                            "availableLanguage": ["zh-TW","en"]
+                        }
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://ricoschool.net/#website",
+                    "url": "https://ricoschool.net/",
+                    "name": "Rico技術學院",
+                    "publisher": { "@id": "https://ricoschool.net/#org" },
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": "https://ricoschool.net/?s={search_term_string}",
+                        "query-input": "required name=search_term_string"
+                    }
+                },
+                {
+                    "@type": "Service",
+                    "@id": "https://ricoschool.net/#image-restoration-service",
+                    "name": "AI 圖片去水印與修復服務",
+                    "serviceType": "Image restoration; Watermark removal",
+                    "provider": { "@id": "https://ricoschool.net/#org" },
+                    "description": "提供移除 Gemini、NotebookLM 圖片浮水印的線上工具與修復模式和下載功能。",
+                    "areaServed": "TW",
+                    "keywords": "移除gemini浮水印, 移除notebooklm浮水印, AI 去水印"
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "@id": "https://ricoschool.net/#app",
+                    "name": "Rico 圖片修復工具",
+                    "operatingSystem": "Web",
+                    "applicationCategory": "Photo",
+                    "description": "一個在瀏覽器中執行的輕量級圖片修復工具，可移除 AI 圖片浮水印。",
+                    "url": "https://ricoschool.net/",
+                    "publisher": { "@id": "https://ricoschool.net/#org" },
+                    "screenshot": "https://ricoschool.net/og-image.png",
+                    "keywords": "圖片修復, 去水印, AI 去水印"
+                }
+            ]
+        }
+        </script>
+
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+
+    <header class="bg-gray-800 border-b border-gray-700 p-4 shadow-lg shrink-0">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                    <div class="bg-indigo-600 p-2 rounded-lg shadow-inner">
+                    <i data-lucide="sparkles" class="w-6 h-10 text-white"></i>
+                </div>
+                <div>
+				    <a href='https://ricoschool.net/' target='_blank'><h1 class="text-xl font-bold tracking-tight leading-tight">Rico技術學院</h1></a>
+                    <h3 class="text-xl font-bold tracking-tight leading-tight">移除 Google AI 浮水印</h3>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest">Multi-Engine v39.0</p>
+                </div>
+            </div>
+                <div class="flex items-center gap-3 mt-3 md:mt-0">
+                    <div id="actionButtons" class="flex gap-3 opacity-0 pointer-events-none transition-opacity duration-300">
+                        <button id="reUploadBtn" class="flex items-center gap-2 bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full font-medium transition-all text-sm">
+                            <i data-lucide="refresh-cw" class="w-4 h-4"></i> 重新上傳
+                        </button>
+                        <button id="downloadBtn" class="flex items-center gap-2 bg-green-600 hover:bg-green-700 px-5 py-2 rounded-full font-medium transition-all shadow-lg active:scale-95 text-sm">
+                            <i data-lucide="download" class="w-4 h-4"></i> 下載圖片
+                        </button>
+                    </div>
+
+                    <a href="https://github.com/ricoisme/removewatermarkofgoogle" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-300 hover:text-white ml-2" aria-label="View on GitHub" title="View on GitHub - removewatermarkofgoogle">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="w-6 h-6">
+                        <span class="hidden sm:inline text-sm font-medium">ricoisme/removewatermarkofgoogle</span>
+                    </a>
+                </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-6xl w-full mx-auto p-6 flex flex-col gap-6 overflow-hidden">
+
+        <!-- SEO friendly intro: brief, keyword-rich description for users and search engines -->
+        <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 text-gray-200">
+            <h2 class="text-lg font-semibold mb-2">移除 Gemini、NotebookLM 圖片浮水印</h2>
+            <p class="text-sm text-gray-300">本工具由 Rico技術學院 提供，專注於移除gemini浮水印、移除notebooklm浮水印 。操作簡單、下載方便。</p>
+        </div>
+
+        <div id="uploadWrapper" class="transition-all duration-500">
+            <div id="dropZone" class="bg-gray-800 border-2 border-dashed border-gray-600 rounded-2xl p-8 sm:p-12 text-center hover:border-indigo-500 hover:bg-gray-700/50 transition-all cursor-pointer group">
+                <input type="file" id="fileInput" accept="image/png, image/jpeg" class="hidden">
+                <div class="bg-gray-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i data-lucide="image-plus" class="w-8 h-8 text-indigo-400"></i>
+                </div>
+                <h2 class="text-xl font-semibold mb-2">上傳圖片</h2>
+            </div>
+        </div>
+
+        <div id="processWrapper" class="hidden flex flex-col items-center gap-4">
+            <div class="flex flex-wrap justify-center items-center gap-3 bg-gray-800 p-3 rounded-2xl border border-gray-700 shadow-xl">
+                <label for="engineSelect" class="pl-4 text-sm font-semibold text-gray-400">修復模式：</label>
+                <select id="engineSelect" class="bg-gray-700 text-white px-4 py-2 pr-10 rounded-xl border-none focus:ring-2 focus:ring-indigo-500 font-medium cursor-pointer appearance-none">
+                    <option value="notebooklm_precision">NotebookLM </option>
+                    <option value="gemini_sparkle">Google Gemini </option>
+                </select>
+                <button id="processBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-2 rounded-xl font-bold shadow-lg transition-all flex items-center gap-2 active:scale-95">
+                    <i data-lucide="wand" class="w-5 h-5"></i> 執行修復
+                </button>
+            </div>
+        </div>
+
+        <div id="previewWrapper" class="hidden flex-1 flex flex-col md:flex-row gap-4 min-h-0">
+            <div class="flex-1 flex flex-col min-w-0 bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                <div class="bg-gray-700/50 px-4 py-2 text-xs font-medium text-gray-300 flex justify-between uppercase">
+                    原始圖片
+                </div>
+                <div id="srcContainer" class="flex-1 overflow-auto canvas-container bg-black/40 relative p-4 flex items-center justify-center">
+                    <canvas id="srcCanvas" class="checkerboard w-full h-auto shadow-2xl"></canvas>
+                </div>
+            </div>
+
+            <div class="flex-1 flex flex-col min-w-0 bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                <div class="bg-gray-700/50 px-4 py-2 text-xs font-medium text-gray-300 flex justify-between uppercase">
+                    修復結果
+                </div>
+                <div id="destContainer" class="flex-1 overflow-auto canvas-container bg-black/40 relative p-4 flex items-center justify-center">
+                    <canvas id="destCanvas" class="checkerboard w-full h-auto shadow-2xl"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="statusToast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-gray-800 border border-gray-600 px-8 py-4 rounded-full shadow-2xl flex items-center gap-3 transition-all translate-y-20 opacity-0 z-50">
+        <div id="statusIconContainer" class="flex items-center justify-center">
+            <div id="loadingSpinner" class="animate-spin rounded-full h-5 w-5 border-2 border-indigo-500 border-t-transparent"></div>
+            <i id="successIcon" data-lucide="check-circle" class="w-5 h-5 text-green-400 hidden"></i>
+        </div>
+        <span id="statusText" class="font-medium">正在運算中...</span>
+    </div>
+
+    <!-- App behavior (moved to external script for maintainability) -->
+    <script src="scripts/app.js" defer></script>
+    <footer class="bg-gray-800 border-t border-gray-700 p-4 text-center text-sm text-gray-400">
+        © 2026 <a href="https://ricoschool.net/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Rico技術學院</a>. All rights reserved.
+    </footer>
+</body>
+</html>
